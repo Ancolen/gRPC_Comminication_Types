@@ -97,7 +97,6 @@ namespace gRPC_Client
 
             await task1;
             await request.RequestStream.CompleteAsync();
-
         }
     }
 }
