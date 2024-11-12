@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC_Unary_Server";
+
+package Unary;
+
+service Unary {
+  rpc SendUnaryMessage (UnaryRequest) returns (UnaryResponse);
+}
+
+message UnaryRequest {
+  string name = 1;
+  string message = 2;
+}
+
+message UnaryResponse {
+  string message = 1;
+}

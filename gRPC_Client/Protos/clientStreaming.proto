@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC_Client_Streaming_Client";
+
+package ClientStreaming;
+
+service ClientStreaming {
+  rpc SendClientStreamingMessage (stream ClientStreamingRequest) returns (ClientStreamingResponse);
+}
+
+message ClientStreamingRequest {
+  string name = 1;
+  string message = 2;
+}
+
+message ClientStreamingResponse {
+  string message = 1;
+}
